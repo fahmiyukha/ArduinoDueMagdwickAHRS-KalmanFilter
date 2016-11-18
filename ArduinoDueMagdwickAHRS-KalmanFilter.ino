@@ -121,6 +121,7 @@ int16_t tempRaw;
 double kalAngleX, kalAngleY; // Calculated angle using a Kalman filter
 
 uint32_t timer;
+uint32_t kalTim;
 /**********************************VARIABLE***********************************/
 
 void setup()
@@ -159,6 +160,7 @@ void loop()
 		Serial.print(" KR: ");		Serial.print(kalAngleX);//Print Roll Kalman
 		Serial.print(" | ");		Serial.print(acc.deltaTime);
 		Serial.print(" | ");		Serial.print(tim.deltaTime);
+		Serial.print(" | ");		Serial.print(kalTim);
 
 		Serial.println();
 	}

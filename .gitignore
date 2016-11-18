@@ -1,0 +1,5 @@
+__vm/Configuration.Debug.vmps.xml
+__vm/Compile.vmps.xml
+Debug/ArduinoDueMagdwickAHRS-KalmanFilter.ino.map
+Debug/ArduinoDueMagdwickAHRS-KalmanFilter.ino.elf
+__vm/Upload.vmps.xml

@@ -27,9 +27,9 @@ void setupAHRS(){
 void readAHRS(){
 
 	// check if it's time to read data and update the filter
-	microsNow = micros();
+	//microsNow = micros();
 
-	if (microsNow - microsPrevious >= microsPerReading) {
+	//if (microsNow - microsPrevious >= microsPerReading) {
 
 		tim.timer.before = tim.timer.now;
 		tim.timer.now = micros();
@@ -37,10 +37,9 @@ void readAHRS(){
 		tim.deltaTime = abs(tim.timer.now - tim.timer.before);//Calc Delta getDegreeAHRS
 		tim.deltaSec = (double)(tim.deltaTime / 1000000.0);
 
-		// read raw data from CurieIMU
+		// read raw data from MPU6050
 		mpu.getMotion6(&aix, &aiy, &aiz, &gix, &giy, &giz);
-		//CurieIMU.readMotionSensor(aix, aiy, aiz, gix, giy, giz);
-
+		
 		// convert from raw data to gravity and degrees/second units
 		ax = convertRawAcceleration(aix);
 		ay = convertRawAcceleration(aiy);
@@ -57,9 +56,18 @@ void readAHRS(){
 		pitch.now = filter.getPitch();
 		yaw.now = filter.getYaw();
 		
+		/*
+		Serial.print("Orientation: ");
+		Serial.print(yaw.now);
+		Serial.print(" ");
+		Serial.print(pitch.now);
+		Serial.print(" ");
+		Serial.println(roll.now);
+		*/
+
 		// increment previous time, so we keep proper pace
 		microsPrevious = microsPrevious + microsPerReading;
-	}
+	//}
 
 }
 

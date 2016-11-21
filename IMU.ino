@@ -18,6 +18,7 @@ void setupAHRS(){
 	tim.timer.now = micros();
 
 	filter.begin(1000);
+
 	// initialize variables to pace updates to correct rate
 	microsPerReading = 1000000 / 1000;
 	microsPrevious = micros();

@@ -21,20 +21,11 @@ void setupAHRS(){
 	acc.timer.now = micros();
 	tim.timer.now = micros();
 
+	// initialize Madgwick AHRS Freq
 	filter.begin(1000);
-
-	// initialize variables to pace updates to correct rate
-	microsPerReading = 1000000 / 1000;
-	microsPrevious = micros();
-
 }
 
 void readAHRS(){
-
-	// check if it's time to read data and update the filter
-	//microsNow = micros();
-
-	//if (microsNow - microsPrevious >= microsPerReading) {
 
 		tim.timer.before = tim.timer.now;
 		tim.timer.now = micros();
@@ -60,19 +51,6 @@ void readAHRS(){
 		roll.now = filter.getRoll();
 		pitch.now = filter.getPitch();
 		yaw.now = filter.getYaw();
-		
-		/*
-		Serial.print("Orientation: ");
-		Serial.print(yaw.now);
-		Serial.print(" ");
-		Serial.print(pitch.now);
-		Serial.print(" ");
-		Serial.println(roll.now);
-		*/
-
-		// increment previous time, so we keep proper pace
-		microsPrevious = microsPrevious + microsPerReading;
-	//}
 
 }
 

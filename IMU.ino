@@ -14,6 +14,10 @@ void setupAHRS(){
 	mpu.setZGyroOffset(32);
 	mpu.setZAccelOffset(800);
 
+	mpu.setFullScaleGyroRange(MPU6050_GYRO_FS_1000);
+	mpu.setFullScaleAccelRange(MPU6050_ACCEL_FS_8);
+
+
 	acc.timer.now = micros();
 	tim.timer.now = micros();
 
@@ -28,9 +32,9 @@ void setupAHRS(){
 void readAHRS(){
 
 	// check if it's time to read data and update the filter
-	microsNow = micros();
+	//microsNow = micros();
 
-	if (microsNow - microsPrevious >= microsPerReading) {
+	//if (microsNow - microsPrevious >= microsPerReading) {
 
 		tim.timer.before = tim.timer.now;
 		tim.timer.now = micros();
@@ -38,10 +42,9 @@ void readAHRS(){
 		tim.deltaTime = abs(tim.timer.now - tim.timer.before);//Calc Delta getDegreeAHRS
 		tim.deltaSec = (double)(tim.deltaTime / 1000000.0);
 
-		// read raw data from CurieIMU
+		// read raw data from MPU6050
 		mpu.getMotion6(&aix, &aiy, &aiz, &gix, &giy, &giz);
-		//CurieIMU.readMotionSensor(aix, aiy, aiz, gix, giy, giz);
-
+		
 		// convert from raw data to gravity and degrees/second units
 		ax = convertRawAcceleration(aix);
 		ay = convertRawAcceleration(aiy);
@@ -58,9 +61,18 @@ void readAHRS(){
 		pitch.now = filter.getPitch();
 		yaw.now = filter.getYaw();
 		
+		/*
+		Serial.print("Orientation: ");
+		Serial.print(yaw.now);
+		Serial.print(" ");
+		Serial.print(pitch.now);
+		Serial.print(" ");
+		Serial.println(roll.now);
+		*/
+
 		// increment previous time, so we keep proper pace
 		microsPrevious = microsPrevious + microsPerReading;
-	}
+	//}
 
 }
 
@@ -69,7 +81,7 @@ float convertRawAcceleration(int aRaw) {
 	// -2g maps to a raw value of -32768
 	// +2g maps to a raw value of 32767
 
-	float a = (aRaw * 2.0) / 32768.0;
+	float a = (aRaw * 8.0) / 32768.0;//change it if you change setRange accel MPU6050
 	return a;
 }
 
@@ -78,7 +90,7 @@ float convertRawGyro(int gRaw) {
 	// -250 maps to a raw value of -32768
 	// +250 maps to a raw value of 32767
 
-	float g = (gRaw * 250.0) / 32768.0;
+	float g = (gRaw * 1000.0) / 32768.0;//change it if you change setRange gyro MPU6050
 	return g;
 }
 
@@ -91,6 +103,7 @@ void setupKalman(){
 }
 
 void kalmanFilter(){
+	kalTim = (micros() - timer);
 	double dt = (double)(micros() - timer) / 1000000.0; // Calculate delta time
 	timer = micros();
 

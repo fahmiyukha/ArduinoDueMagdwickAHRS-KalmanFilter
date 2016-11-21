@@ -166,6 +166,7 @@ PreProcessor.HeaderCount=1
 PreProcessor.PrototypeCount=10
 vm.last.preproc.file.0.file=ArduinoDueMagdwickAHRS-KalmanFilter.ino
 vm.last.preproc.file.0.offset=1
+<<<<<<< HEAD
 vm.last.preproc.file.0.length=3372
 vm.last.preproc.file.0.linecount=163
 vm.last.preproc.file.0.linestart=0
@@ -177,6 +178,19 @@ vm.last.preproc.file.1.length=3785
 vm.last.preproc.file.1.linecount=126
 vm.last.preproc.file.1.linestart=163
 vm.last.preproc.file.1.lineend=289
+=======
+vm.last.preproc.file.0.length=3490
+vm.last.preproc.file.0.linecount=172
+vm.last.preproc.file.0.linestart=0
+vm.last.preproc.file.0.lineend=172
+vm.last.preproc.file.0.prefix_lines=0
+vm.last.preproc.file.1.file=IMU.ino
+vm.last.preproc.file.1.offset=173
+vm.last.preproc.file.1.length=4137
+vm.last.preproc.file.1.linecount=139
+vm.last.preproc.file.1.linestart=172
+vm.last.preproc.file.1.lineend=311
+>>>>>>> refs/remotes/origin/develop
 vm.last.preproc.file.1.prefix_lines=0
 serial.port.file=COM9
 serial.port=COM9
@@ -186,14 +200,25 @@ runtime.vm.ide.platforms.path=D:\Program Files (x86)\Microsoft Visual Studio 12.
 build.variant.path=C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\variants\arduino_due_x
 build.core.path=C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\cores\arduino
 archive_file=core.a
+<<<<<<< HEAD
 extra.time.local=64284696
 vm_all_includes= -I"C:\Users\MyWindows\Documents\Arduino\ArduinoDueMagdwickAHRS-KalmanFilter"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\cores\arduino"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\variants\arduino_due_x"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\I2Cdev"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\KalmanFilter"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\MadgwickAHRS"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\MPU6050"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\libraries\Wire\src"  -I"C:\Program Files (x86)\Arduino\libraries"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\libraries"  -I"D:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\me2qw3t1.5c1\Micro Platforms\default\debuggers"  -I"C:\Users\MyWindows\Documents\Arduino\libraries" 
 vm_core_includes= -I"C:\Users\MyWindows\Documents\Arduino\ArduinoDueMagdwickAHRS-KalmanFilter"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\cores\arduino"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\variants\arduino_due_x" 
 includes= -I"C:\Users\MyWindows\Documents\Arduino\ArduinoDueMagdwickAHRS-KalmanFilter"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\cores\arduino"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\variants\arduino_due_x"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\I2Cdev"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\KalmanFilter"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\MadgwickAHRS"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\MPU6050"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\libraries\Wire\src"  -I"C:\Program Files (x86)\Arduino\libraries"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\libraries"  -I"D:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\me2qw3t1.5c1\Micro Platforms\default\debuggers"  -I"C:\Users\MyWindows\Documents\Arduino\libraries" 
+=======
+extra.time.local=63211037
+vm_all_includes= -I"C:\Users\MyWindows\Documents\Arduino\ArduinoDueMagdwickAHRS-KalmanFilter"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\cores\arduino"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\variants\arduino_due_x"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\DueTimer"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\I2Cdev"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\KalmanFilter"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\MadgwickAHRS"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\MPU6050"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\libraries\Wire\src"  -I"C:\Program Files (x86)\Arduino\libraries"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\libraries"  -I"D:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\me2qw3t1.5c1\Micro Platforms\default\debuggers"  -I"C:\Users\MyWindows\Documents\Arduino\libraries" 
+vm_core_includes= -I"C:\Users\MyWindows\Documents\Arduino\ArduinoDueMagdwickAHRS-KalmanFilter"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\cores\arduino"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\variants\arduino_due_x" 
+includes= -I"C:\Users\MyWindows\Documents\Arduino\ArduinoDueMagdwickAHRS-KalmanFilter"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\cores\arduino"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\variants\arduino_due_x"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\DueTimer"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\I2Cdev"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\KalmanFilter"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\MadgwickAHRS"  -I"C:\Users\MyWindows\Documents\Arduino\libraries\MPU6050"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\libraries\Wire\src"  -I"C:\Program Files (x86)\Arduino\libraries"  -I"C:\Users\MyWindows\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\libraries"  -I"D:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\me2qw3t1.5c1\Micro Platforms\default\debuggers"  -I"C:\Users\MyWindows\Documents\Arduino\libraries" 
+>>>>>>> refs/remotes/origin/develop
 build.path_sketch=C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg
 build.path_core=C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg\core
 build.path_libraries=C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg
 object_file=C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg\ArduinoDueMagdwickAHRS-KalmanFilter.cpp.o
 source_file=C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg\ArduinoDueMagdwickAHRS-KalmanFilter.cpp
+<<<<<<< HEAD
 object_files= "C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg\I2Cdev\I2Cdev.cpp.o"  "C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg\KalmanFilter\Kalman.cpp.o"  "C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg\MadgwickAHRS\MadgwickAHRS.cpp.o"  "C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg\MPU6050\MPU6050.cpp.o"  "C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg\Wire\Wire.cpp.o"  "C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg\ArduinoDueMagdwickAHRS-KalmanFilter.cpp.o" 
+=======
+object_files= "C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg\DueTimer\DueTimer.cpp.o"  "C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg\I2Cdev\I2Cdev.cpp.o"  "C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg\KalmanFilter\Kalman.cpp.o"  "C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg\MadgwickAHRS\MadgwickAHRS.cpp.o"  "C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg\MPU6050\MPU6050.cpp.o"  "C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg\Wire\Wire.cpp.o"  "C:\Users\MyWindows\AppData\Local\V.Micro\Arduino\Builds\ArduinoDueMagdwickAHRS-KalmanFilter\arduino_due_x_dbg\ArduinoDueMagdwickAHRS-KalmanFilter.cpp.o" 
+>>>>>>> refs/remotes/origin/develop
 recipe.objcopy.eep.pattern=

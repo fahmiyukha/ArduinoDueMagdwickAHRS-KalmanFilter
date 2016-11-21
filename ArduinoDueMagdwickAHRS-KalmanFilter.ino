@@ -5,7 +5,8 @@
 
 /************************************HEADER***********************************/
 //TASK SCHEDULER
-//#include <Scheduler.h>
+
+#include <DueTimer.h>
 #include "math.h"
 #include "MadgwickAHRS\MadgwickAHRS.h"
 
@@ -120,12 +121,18 @@ int16_t tempRaw;
 double kalAngleX, kalAngleY; // Calculated angle using a Kalman filter
 
 uint32_t timer;
+uint32_t kalTim;
 /**********************************VARIABLE***********************************/
 
 void setup()
 {
 	Serial.begin(115200);
 	setupAHRS();
+
+	Timer8.attachInterrupt(readAHRS);
+	Timer8.setPeriod(1000);
+	Timer8.start(1000);
+	
 	setupKalman();
 	pinMode(13, OUTPUT);
 	/* add setup code here */
@@ -141,8 +148,9 @@ void loop()
 	acc.deltaTime = abs(acc.timer.now - acc.timer.before);//Calc Delta Loop
 	acc.deltaSec = (double)(acc.deltaTime / 1000000.0);
 
-	readAHRS();
+	//readAHRS();
 	kalmanFilter();
+	
 	if ((millis() - timerPrintOut) > 100)
 	{
 		timerPrintOut = millis();
@@ -152,10 +160,11 @@ void loop()
 		Serial.print(" KR: ");		Serial.print(kalAngleX);//Print Roll Kalman
 		Serial.print(" | ");		Serial.print(acc.deltaTime);
 		Serial.print(" | ");		Serial.print(tim.deltaTime);
+		Serial.print(" | ");		Serial.print(kalTim);
 
 		Serial.println();
 	}
-
+	
 
 	/* add main program code here */
 
